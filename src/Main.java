@@ -10,9 +10,9 @@ public class Main {
 
         Services.registerDefaultProvider(new DefaultProvider());
 
-        Service service1 = Services.newInstance();
-        service1.sendMessage("Hello send Message");
-
+        Service myService = Services.newInstance();
+        myService.sendMessage("Hello send Message");
+        myService.rejectMessage("Reject !!!");
 
     }
 }
