@@ -21,7 +21,7 @@ public class PersonBad {
         gmtCal.set(1965, Calendar.JANUARY, 1, 0, 0, 0);
         Date boomEnd = gmtCal.getTime();
 
-        return birthDate.compartTo(boomStart) >= 0 && birthDate.compareTo(boomEnd) < 0;
+        return birthDate.compareTo(boomStart) >= 0 && birthDate.compareTo(boomEnd) < 0;
 
     }
 }

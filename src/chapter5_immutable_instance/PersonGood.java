@@ -8,7 +8,7 @@ public class PersonGood {
 
     private final Date birthDate;
 
-    public PersonBad(Date birthDate){
+    public PersonGood(Date birthDate){
         this.birthDate = birthDate;
     }
 
