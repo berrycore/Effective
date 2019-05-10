@@ -1,5 +1,7 @@
 package chapter8_how_to_override_equals;
 
+import java.awt.*;
+
 public class Usage_equals {
 
     // equals overriding 계약 조건
@@ -25,10 +27,10 @@ public class Usage_equals {
 
     public static void main(String[] args) {
 
+        // 2. 대칭적 (Symmetric)
         CaseInsensitiveStringBad cisb = new CaseInsensitiveStringBad("Polish");
         CaseInsensitiveStringGood cisg = new CaseInsensitiveStringGood("Polish");
         String s = "polish";
-
 
         System.out.println("cisb.equals(s) : " + cisb.equals(s)); // true
         System.out.println("s.equals(cisb) : " + s.equals(cisb)); // false
@@ -36,6 +38,11 @@ public class Usage_equals {
         System.out.println("cisg.equals(s) : " + cisg.equals(s)); // false
         System.out.println("s.equals(cisg) : " + s.equals(cisg)); // false
 
+        // 3. 이행적 (Transitive)
+        Point p = new Point(1,2);
+        ColorPoint cp = new Color(1, 2, Color.RED);
 
+        System.out.println("p.equals(cp) : " + p.equals(cp));
+        System.out.println("cp.equals(p) : " + cp.equals(p));
     }
 }
