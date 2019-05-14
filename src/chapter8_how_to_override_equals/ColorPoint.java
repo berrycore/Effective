@@ -1,6 +1,6 @@
 package chapter8_how_to_override_equals;
 
-import java.awt.*;
+import java.awt.Color;
 
 public class ColorPoint extends Point {
 
