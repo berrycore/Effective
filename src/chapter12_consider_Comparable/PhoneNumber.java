@@ -24,6 +24,22 @@ public class PhoneNumber implements Cloneable, Comparable<PhoneNumber> {
         }
     }
 
+    /**
+     * compareTo 메소드
+     * 1) 현재 객체의 값이 지정 객체보다 작으면 음수정수를 같으면 0을, 크면 양수정수를 반환한다.
+     *    만일 지정 객체의 타입이 현재 객체와 비교할 수  없는 타입이면 ClassCastException 예외 발생.
+     *
+     * 2) 모든 x 와 y 에 대하여 sgn(x.compareTo(y)) == -sgn(y.compareTo(x)) 가 되도록 한다.
+     *
+     * 3) 이행적인 관계가 성립되어야 한다.
+     *    즉, (x.compareTo(y) > 0 && y.compareTo(x) > 0) 이면 x.compareTo(x) > 0 이어야 한다
+     *
+     * 4) x.compareTo(y) == 0 이라면 모든 z 에 대해 sgn(x.compareTo(z)) == sgn(y.compareTo(z)) 가 되어야 한다.
+     *
+     * 5) 반드시 요구되는 것은 아니지만, (x.compareTo(y) == 0) == (x.equals(y)) 가 되도록 하는 것이 좋낟.
+     *    만약 Comparable 인터페이스를 구현하면서 이 조항을 지키지 않는 클래스에서는 API 문서에 분명히 밝힌다.
+     *
+     * */
     @Override
     public int compareTo(PhoneNumber pn){
         int areaCodeDiff = areaCode - pn.areaCode;
