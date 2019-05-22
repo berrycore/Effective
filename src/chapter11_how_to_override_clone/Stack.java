@@ -37,7 +37,7 @@ public class Stack {
         try{
             Stack result = (Stack) super.clone();
             result.elements = elements.clone();
-            return stack;
+            return result;
         }catch (CloneNotSupportedException e) {
             throw new AssertionError();
         }
