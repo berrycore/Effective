@@ -11,9 +11,23 @@ public class Complex {
     public static final Complex ONE = new Complex(1,0);
     public static final Complex I = new Complex(0,1);
 
-    public Complex(double re, double im){
+
+//    public Complex(double re, double im){
+//        this.re = re;
+//        this.im = im;
+//    }
+    private Complex(double re, double im){
         this.re = re;
         this.im = im;
+    }
+
+    public static Complex valueOf(double re, double im){
+        return new Complex(re, im);
+    }
+
+    public static Complex valueOfPolar(double r, double theta){
+        return new Complex(r * Math.cos(theta),
+                           r * Math.sin(theta));
     }
 
     public double realPart(){
@@ -57,7 +71,6 @@ public class Complex {
         return  Double.compare(re, c.re) == 0 &&
                 Double.compare(im, c.im) == 0;
     }
-
 
     @Override
     public int hashCode() {
