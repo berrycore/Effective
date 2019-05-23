@@ -1,8 +1,6 @@
 package chapter16_composit_pattern;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Usage_composit {
 
@@ -20,6 +18,15 @@ public class Usage_composit {
         InstrumentedSet<String> s = new InstrumentedSet<String>(new HashSet<>());
         s.addAll(Arrays.asList("Snap", "Crackle", "Pop"));
         System.out.println(s.getAddCount());    // addCount is 3
+
+
+
+        Set<Date> dateSet = new InstrumentedSet<Date>(new TreeSet<Date>());
+        dateSet.add(new Date(System.currentTimeMillis()));
+        for(Object obj  : dateSet.toArray()){
+            Date date= (Date)obj;
+            System.out.println(date);
+        }
 
     }
 }
