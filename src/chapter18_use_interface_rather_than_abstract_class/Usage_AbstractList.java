@@ -1,9 +1,7 @@
 package chapter18_use_interface_rather_than_abstract_class;
 
-import com.sun.prism.Texture;
+import java.util.*;
 
-import java.util.AbstractList;
-import java.util.List;
 
 public class Usage_AbstractList {
 
@@ -34,6 +32,7 @@ public class Usage_AbstractList {
 
     public static void main(String[] args) {
 
+        // 1) AbstractList
         int[] arrayInt = {1,2,3,4,5};
         List<Integer> integerList = Usage_AbstractList.intArrayList(arrayInt);
 
