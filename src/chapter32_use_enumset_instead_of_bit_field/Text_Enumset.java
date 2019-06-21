@@ -1,4 +1,4 @@
-package chapter32_use_enumset_without_bit_field;
+package chapter32_use_enumset_instead_of_bit_field;
 
 import java.util.Set;
 

@@ -1,4 +1,4 @@
-package chapter32_use_enumset_without_bit_field;
+package chapter32_use_enumset_instead_of_bit_field;
 
 public class Text_Old {
     public static final int STYLE_BOLD = 1 << 0;    // 1
