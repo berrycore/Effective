@@ -15,4 +15,10 @@ public class Herb {
     public String toString(){
         return name;
     }
+
+    public Type getType(){
+        return this.type;
+    }
+
+
 }
