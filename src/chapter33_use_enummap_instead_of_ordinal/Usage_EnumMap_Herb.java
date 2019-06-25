@@ -1,11 +1,8 @@
 package chapter33_use_enummap_instead_of_ordinal;
 
-import java.util.EnumMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
-public class Usage_EnumMap {
+public class Usage_EnumMap_Herb {
     public static void main(String[] args) {
 
         Herb[] garden = new Herb[5];
